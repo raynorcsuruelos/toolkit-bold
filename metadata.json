@@ -1,0 +1,6 @@
+{
+  "name": "Personal Toolkit - raynorcsuruelos@gmail.com",
+  "description": "Personal toolkit featuring Kuwait IC ARP Calc, WL Kit Finder, WL Lab Inventory, and WL Tool FAQs.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

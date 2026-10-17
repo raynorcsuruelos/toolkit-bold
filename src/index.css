@@ -1,0 +1,127 @@
+@import "tailwindcss";
+
+:root {
+  --navy: #003057;
+  --navy-hover: #002240;
+  --navy-deep: #001830;
+  --blue: #0066a1;
+  --blue-hover: #004e7c;
+  --green: #1a7a3c;
+  --red: #c0392b;
+}
+
+/* Animations for Rig Logo */
+@keyframes rig-bob {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes rig-bounce {
+  0%, 100% {
+    transform: translateY(0) rotate(0);
+  }
+  25% {
+    transform: translateY(-3.5px) rotate(-3deg);
+  }
+  75% {
+    transform: translateY(-3.5px) rotate(3deg);
+  }
+}
+
+@keyframes flag-wave {
+  from {
+    transform: scaleX(1) skewY(0deg);
+  }
+  to {
+    transform: scaleX(0.7) skewY(10deg);
+  }
+}
+
+@keyframes logo-glow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.35);
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes arp-shake {
+  0%, 70%, 100% {
+    transform: translateX(0);
+  }
+  74% {
+    transform: translateX(-4px) rotate(-1.5deg);
+  }
+  78% {
+    transform: translateX(4px) rotate(1.5deg);
+  }
+  82% {
+    transform: translateX(-3px) rotate(-1deg);
+  }
+  86% {
+    transform: translateX(3px) rotate(1deg);
+  }
+  90% {
+    transform: translateX(0);
+  }
+}
+
+.logo-box-glow {
+  animation: logo-glow 3s ease-in-out infinite;
+}
+
+.rig-animated-group {
+  transform-origin: 24px 46px;
+  animation: rig-bob 3s ease-in-out infinite;
+}
+
+.rig-animated-group:hover,
+button:hover .rig-animated-group {
+  animation: rig-bounce 0.6s ease-in-out infinite;
+}
+
+.flag-wave-element {
+  transform-box: fill-box;
+  transform-origin: left center;
+  animation: flag-wave 1.2s ease-in-out infinite alternate;
+}
+
+.animate-pop-in {
+  animation: popIn 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-shake {
+  animation: arp-shake 2.4s ease-in-out infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
